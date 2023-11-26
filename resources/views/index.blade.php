@@ -421,15 +421,19 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form" name="havid-contact-form">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form " name="portofolio-contact-form">
               <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="name">Name</label>
-                  <input type="text" name="name" class="form-control" id="name" required aria-describedby="name">
+                <div class="alert alert-warning alert-dismissible fade show d-none my-alert" role="alert">
+                  <strong>Thank you!</strong> your message has been received.
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="name">Email</label>
-                  <input type="email" class="form-control" name="email" id="email" required aria-describedby="email">
+                  <label for="name">Name</label>
+                  <input type="text" name="name" class="form-control" id="name" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="name"> Email</label>
+                  <input type="email" class="form-control" name="email" id="email" required>
                 </div>
               </div>
               <div class="form-group">
@@ -438,19 +442,15 @@
               </div>
               <div class="form-group">
                 <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="0" required></textarea>
+                <textarea class="form-control" name="message" rows="10" required></textarea>
               </div>
               <div class="my-3">
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                <div class="error-message">Maaf, kami tidak dapat memproses permintaan pesan Anda saat ini. Silakan coba lagi nanti</div>
-                <div class="sent-message alert alert-warning alert-dismissible fade show d-none my-alert" role="alert">Pesan Anda telah terkirim. Terima kasih!</div>
+                <div class="loading btn-loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit" class="btn btn-success btn-primary btn-kirim">Kirim Pesan</button></div>
+              <div class="text-center btn-kirim"><button type="submit">Send Message</button></div>
             </form>
-            <button class="btn btn-primary btn-loading d-none" type="button" disabled>
-              <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
-              <span role="status">Loading...</span>
-            </button>
           </div>
 
         </div>
