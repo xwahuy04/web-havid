@@ -425,11 +425,11 @@
               <div class="row">
                 <div class="form-group col-md-6">
                   <label for="name">Name</label>
-                  <input type="text" name="name" class="form-control" id="name" required>
+                  <input type="text" name="name" class="form-control" id="name" required aria-describedby="name">
                 </div>
                 <div class="form-group col-md-6">
                   <label for="name">Email</label>
-                  <input type="email" class="form-control" name="email" id="email" required>
+                  <input type="email" class="form-control" name="email" id="email" required aria-describedby="email">
                 </div>
               </div>
               <div class="form-group">
@@ -441,12 +441,16 @@
                 <textarea class="form-control" name="message" rows="0" required></textarea>
               </div>
               <div class="my-3">
-                <div class="loading">Loading</div>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 <div class="error-message">Maaf, kami tidak dapat memproses permintaan pesan Anda saat ini. Silakan coba lagi nanti</div>
-                <div class="sent-message">Pesan Anda telah terkirim. Terima kasih!</div>
+                <div class="sent-message alert alert-warning alert-dismissible fade show d-none my-alert" role="alert">Pesan Anda telah terkirim. Terima kasih!</div>
               </div>
-              <div class="text-center"><button type="submit">Kirim Pesan</button></div>
+              <div class="text-center"><button type="submit" class="btn btn-success btn-primary btn-kirim">Kirim Pesan</button></div>
             </form>
+            <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+              <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+              <span role="status">Loading...</span>
+            </button>
           </div>
 
         </div>
