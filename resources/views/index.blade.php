@@ -424,7 +424,7 @@
             <form action="forms/contact.php" method="post" role="form" class="php-email-form " name="portofolio-contact-form">
               <div class="row">
                 <div class="alert alert-warning alert-dismissible fade show d-none my-alert" role="alert">
-                  <strong>Thank you!</strong> your message has been received.
+                  <strong>Terimakasih!</strong> Pesan anda sudah saya terima.
                   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
                 <div class="form-group col-md-6">
